@@ -1,6 +1,6 @@
 {
   "name": "obsidian-jsonifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a plugin for Obsidian.md that lets you select text and copy a transformed version to the clipboard (either JSON.stringify() or JSON.parse())",
   "main": "main.js",
   "scripts": {

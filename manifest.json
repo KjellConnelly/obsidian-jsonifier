@@ -1,7 +1,7 @@
 {
 	"id": "obsidian-jsonifier",
 	"name": "JSONifier",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "0.9.12",
 	"description": "Select text that you want to JSON.stringify(), or JSON.parse(). Select text and use the keystroke and the transformation will be copied to your clipboard. Paste it wherever you want.",
 	"author": "Kjell Connelly",

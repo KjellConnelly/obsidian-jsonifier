@@ -12,15 +12,20 @@ export default class MyPlugin extends Plugin {
         modifiers: ["Mod", "Alt"],
         key: "["
       }],
-      callback: () => {
+      callback: async() => {
         let text = ''
         if (window.getSelection) {
           text = window.getSelection().toString();
         } else if (document.selection && document.selection.type != "Control") {
           text = document.selection.createRange().text;
         }
-        navigator.clipboard.writeText(JSON.parse(text))
-        new Notice('Selection parsed and copied to clipboard.');
+        try {
+          text = JSON.parse(text)
+          navigator.clipboard.writeText(text)
+          new Notice('Selection parsed and copied to clipboard.');
+        } catch(err) {
+          new Notice(`ERROR parsing selected text. Not valid JSON: ${err}`);
+        }
       }
     })
 

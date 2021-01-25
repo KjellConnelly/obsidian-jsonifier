@@ -2,11 +2,15 @@
 
 All this plugin does is convert highlighted text via `JSON.stringify(text)` or `JSON.parse(text)`.
 
-## How to use
+### How to use
 
 1. Highlight text you can to convert
 2. Use hotkey to parse selection (default `Cmd+Alt+[`) or stringify selection (default `Cmd+Alt+[`). You can update hotkeys if you'd like.
 3. Paste wherever you want. (Note, selection must be a valid JSON string to parse it. So if you're copying a JSON string, make sure you select the quotes around it as well).
+
+##### Also useful to validate JSON
+
+As you may know, `JSON.parse()` also throws an error if the string is not valid JSON. So if you're writing a JSON codeblock, or editing frontmatter in JSON format, you can use the `JSON.parse()` function to check your code.
 
 ### Example
 
